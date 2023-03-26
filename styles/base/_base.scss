@@ -1,0 +1,28 @@
+@use './../variables' as vars;
+
+* {
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: vars.$col-black;
+}
+
+body {
+  font-family: vars.$font-text;
+  font-size: vars.$fsize-16px;
+  font-weight: vars.$fweight-regular;
+}
+
+// h3 {
+//   font-size: vars.$fsize-14px;
+// }
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
