@@ -1,9 +1,5 @@
 const Chats = () => {
-  return (
-    <div>
-      Page liste des chats
-    </div>
-  );
+  return <div>Page liste des chats</div>;
 };
 
 export default Chats;
