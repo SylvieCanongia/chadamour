@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,12 +15,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@chadamour/header": "workspace:^1.0.0",
+    "@chadamour/layout": "workspace:^2.0.0",
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "packages": "^0.0.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"
@@ -25,8 +31,15 @@
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "prettier": "^2.8.7",
     "sass": "^1.60.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.15.0",
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm"
+  },
+  "packageManager": "pnpm@7.30.3"
 }
