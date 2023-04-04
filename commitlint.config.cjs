@@ -9,7 +9,7 @@
 // test: Adding missing tests or correcting existing tests
 // chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
-'use strict'
+'use strict';
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
