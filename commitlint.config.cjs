@@ -53,13 +53,12 @@ module.exports = {
 };
 
 // Then enable commitlint with Husky by using:
+// pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 
-// pnpm husky add .husky/commit-msg 'pnpm --no-install commitlint --config commitlint.config.cjs --edit $1'
-// pnpm husky add .husky/commit-msg 'pnpm --no-install commitlint --edit $1'
-// pnpm husky add .husky/commit-msg 'pnpm --no -- commitlint --edit "$1"'
+// pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
+// pnpm husky add .husky/commit-msg 'pnpm commitlint --edit "$1"'
 // # Sometimes above command doesn't work in some command interpreters
-// # You can try other commands below to write pnpm --no -- commitlint --edit $1
-// # in the commit-msg file.
-// pnpm husky add .husky/commit-msg \"pnpm --no -- commitlint --edit '$1'\"
+// # You can try other commands below
+// pnpm husky add .husky/commit-msg \"pnpm commitlint --edit '$1'\"
 // # or
-// pnpm husky add .husky/commit-msg "pnpm --no -- commitlint --edit $1"
+// pnpm husky add .husky/commit-msg 'pnpm commitlint --config commitlint.config.cjs --edit $1'
