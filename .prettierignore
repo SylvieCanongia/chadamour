@@ -1,4 +1,14 @@
+build
+coverage
 .yarn
 .next
 dist
 node_modules
+
+#  Run "prettier --write ." to make sure that everything is formatted
+# https://prettier.io/docs/en/ignore.html
+# A comment of // prettier-ignore will exclude the next node in the abstract syntax tree from formatting.
+# HTML : <!-- prettier-ignore -->
+# JSX : {/* prettier-ignore */}
+# JS : // prettier-ignore
+# <!-- prettier-ignore-attribute (mouseup) -->

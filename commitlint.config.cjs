@@ -7,6 +7,9 @@
 // refactor: A code change that neither fixes a bug nor adds a feature
 // style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 // test: Adding missing tests or correcting existing tests
+// chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+'use strict'
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
@@ -51,6 +54,7 @@ module.exports = {
 
 // Then enable commitlint with Husky by using:
 
+// pnpm husky add .husky/commit-msg 'pnpm --no-install commitlint --config commitlint.config.cjs --edit $1'
 // pnpm husky add .husky/commit-msg 'pnpm --no-install commitlint --edit $1'
 // pnpm husky add .husky/commit-msg 'pnpm --no -- commitlint --edit "$1"'
 // # Sometimes above command doesn't work in some command interpreters

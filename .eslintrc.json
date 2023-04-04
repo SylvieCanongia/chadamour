@@ -6,9 +6,14 @@
   "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
   "globals": {
     "React": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
+    // "no-unused-vars": 0, // As example: Will never bug you about unused variables again
   }
-  // "rules": {
-  //   "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
-  //   // "no-unused-vars": 0, // As example: Will never bug you about unused variables again
-  // }
 }
+
+// custom rule to prefix variables with an underscore _
+// if you have declared them but not used them in the code.
+
+// If you encounter a rule you don't like you can disable it in "rules" by simply setting it to 1 (warning) or 0 (ignore)
