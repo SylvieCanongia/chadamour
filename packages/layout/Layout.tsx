@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+// import Head from 'next/head';
 
 export interface ILayout {
   children?: React.ReactNode;
@@ -8,13 +8,13 @@ export interface ILayout {
 export const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Modèle de layout</title>
-      </Head>
-      <main>
+      </Head> */}
+      <section>
         {children}
         Coucou
-      </main>
+      </section>
     </>
   );
 };

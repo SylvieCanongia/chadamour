@@ -15,10 +15,8 @@ export const Header: React.FC<HeaderProps> = ({ logo, links }) => {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
-        <div className={styles.header__logo__container}>
-          <div className={styles.header__logo}>
-            <Link href="/">{logo}</Link>
-          </div>
+        <div className={styles.header__logo}>
+          <Link href="/">{logo}</Link>
         </div>
 
         <nav className={styles.header__nav__container}>
