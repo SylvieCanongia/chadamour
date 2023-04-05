@@ -1,35 +1,30 @@
-import Head from 'next/head';
-import '@/styles/globals.scss';
+import type { ReactElement, ReactNode } from 'react'
 import type { AppProps } from 'next/app';
-import { Header, type HeaderProps } from '@chadamour/header';
+import type { NextPage } from 'next';
+import { Layout } from '@/packages/layout';
+import '@/styles/globals.scss';
 
-// build an instance of our HeaderProps to pass to the Header component
-const headerProps: HeaderProps = {
-  logo: 'Mon logo',
-  links: [
-    {
-      label: 'Les Chats',
-      route: '/chats',
-    },
-    {
-      label: 'A propos',
-      route: '/a-propos',
-    },
-  ],
-};
+// With TypeScript, we must first create a new type for your pages which includes a getLayout function.
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (_page: ReactElement) => ReactNode
+}
 
-export default function App({ Component, pageProps }: AppProps) {
+// Then, we must create a new type for your AppProps which overrides the Component property to use the previously created type.
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  // operator ?? can be used to provide a fallback value in case another value is null or undefined (here Component.getLayout)
+  // const getLayout = Component.getLayout ?? (page => page);
+  if(Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />)
+  }
+
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Une application pour les amoureux des chats"
-        />
-      </Head>
-      <Header logo={headerProps.logo} links={headerProps.links} />
-      <Component {...pageProps} />;
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
