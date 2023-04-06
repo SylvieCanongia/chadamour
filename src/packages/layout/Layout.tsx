@@ -25,16 +25,16 @@ export const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <>
       <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="description"
-            content="Une application pour les amoureux des chats"
-          />
-        </Head>
-        <Header logo={headerProps.logo} links={headerProps.links} />
-        {children}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Une application pour les amoureux des chats"
+        />
+      </Head>
+      <Header logo={headerProps.logo} links={headerProps.links} />
+      {children}
     </>
   );
 };
 
-// export default Layout;
+export default Layout;

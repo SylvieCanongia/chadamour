@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { HeaderNavLink, NavLink } from '@/components/HeaderNavLink';
+import { HeaderNavLink, NavLink } from '@/domain/components/HeaderNavLink';
 import styles from './header.module.scss';
 
 // define our Header properties that will be passed into the component

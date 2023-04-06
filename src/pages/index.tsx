@@ -13,7 +13,7 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Chadamour</title>
       </Head>
-        <h1>Bienvenue sur Chadamour, un site pour les amoureux des chats !</h1>
+      <h1>Bienvenue sur Chadamour, un site pour les amoureux des chats !</h1>
     </>
   );
 };

@@ -8,9 +8,5 @@ const About: NextPageWithLayout = () => {
 export default About;
 
 About.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
-      {page}
-    </>
-  )
-}
+  return <>{page}</>;
+};
