@@ -19,22 +19,22 @@
         "zones": [
           {
             "target": "./src/core",
-            "from": "./src/components"
+            "from": "./src/domain/components"
           },
           {
             "target": "./src/core",
-            "from": "./src/lib"
+            "from": "./src/domain/lib"
           },
           {
             "target": "./src/core",
             "from": "./src/pages"
           },
           {
-            "target": "./src/lib",
+            "target": "./src/domain/lib",
             "from": "./src/pages"
           },
           {
-            "target": "./src/components",
+            "target": "./src/domain/components",
             "from": "./src/pages"
           }
         ]

@@ -21,7 +21,7 @@
       "@/components/*": ["./src/domain/components/*"],
       "@/lib/*": ["./src/domain/lib/*"],
       "@/pages/*": ["./src/pages/*"],
-      "@/public/*": ["../public/*"],
+      "@/public/*": ["../public/*"]
     }
   },
   "include": [
@@ -33,6 +33,7 @@
     "**/*.cjs",
     "**/*.mjs",
     "**/*.jsx",
-    "**/*.json"],
+    "**/*.json"
+  ],
   "exclude": ["**/node_modules", "**/.*/"]
 }

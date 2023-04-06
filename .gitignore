@@ -4,22 +4,29 @@
 /node_modules
 /.pnp
 .pnp.js
+# .pnp.js
+.pnp.*
 
 # testing
 /coverage
+.out/
 
-# next.js
+# build directories
 /.next/
 /out/
-
-# production
 /build
+
+# Cache
+**/tsconfig.tsbuildinfo
+**/.eslintcache
+.cache/*
 
 # misc
 .DS_Store
 *.pem
 
 # debug
+**/.debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -27,12 +34,24 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.local
 
-# vercel
+# Deployment platforms
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# security: atlassian/changeset
+**/.netrc
 
 /docs
