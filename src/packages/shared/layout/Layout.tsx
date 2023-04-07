@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { Header, type HeaderProps } from '@chadamour/header';
+import styles from './layout.module.scss';
+import logoImage from './logo-cat-3-250x49.png';
 
 export interface ILayout {
   children?: React.ReactNode;
@@ -8,7 +10,12 @@ export interface ILayout {
 
 // build an instance of our HeaderProps to pass to the Header component
 const headerProps: HeaderProps = {
-  logo: 'Mon logo',
+  logo: {
+    src: logoImage,
+    alt: 'Logo de Chadamour',
+    width: 250,
+    height: 49,
+  },
   links: [
     {
       label: 'Les Chats',
@@ -31,8 +38,10 @@ export const Layout: React.FC<ILayout> = ({ children }) => {
           content="Une application pour les amoureux des chats"
         />
       </Head>
-      <Header logo={headerProps.logo} links={headerProps.links} />
-      {children}
+      <div id={styles.app}>
+        <Header logo={headerProps.logo} links={headerProps.links} />
+        {children}
+      </div>
     </>
   );
 };

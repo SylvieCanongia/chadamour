@@ -14,7 +14,7 @@
     // "no-unused-vars": 0, // As example: Will never bug you about unused variables again
     // warn us if we're importing from the wrong paths
     "import/no-restricted-paths": [
-      "error",
+      "error", // can be "warning" if prefered
       {
         "zones": [
           {

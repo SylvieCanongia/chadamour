@@ -1,11 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
 import { HeaderNavLink, NavLink } from '@/domain/components/HeaderNavLink';
 import styles from './header.module.scss';
 
+export type ImageProps = {
+  src: StaticImageData;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 // define our Header properties that will be passed into the component
 export type HeaderProps = {
-  logo: string;
+  logo: ImageProps;
   links: NavLink[];
 };
 
@@ -16,7 +24,14 @@ export const Header: React.FC<HeaderProps> = ({ logo, links }) => {
     <header className={styles.header}>
       <div className={styles.header__container}>
         <div className={styles.header__logo}>
-          <Link href="/">{logo}</Link>
+          <Link href="/">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+            />
+          </Link>
         </div>
 
         <nav className={styles.header__nav__container}>

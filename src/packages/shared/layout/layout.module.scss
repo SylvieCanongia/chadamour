@@ -1,0 +1,12 @@
+@use './../../../styles/utils/variables' as vars;
+
+#app {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: vars.$space-S;
+  gap: vars.$space-S;
+}
