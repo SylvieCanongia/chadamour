@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import { HeaderNavLink, NavLink } from '@/domain/components/HeaderNavLink';
-import styles from './header.module.scss';
+import styles from './Header.module.scss';
 
 export type ImageProps = {
   src: StaticImageData;

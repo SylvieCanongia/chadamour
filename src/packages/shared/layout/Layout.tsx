@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { Header, type HeaderProps } from '@chadamour/header';
-import styles from './layout.module.scss';
+import styles from './Layout.module.scss';
 import logoImage from './logo-cat-3-250x49.png';
 
 export interface ILayout {
