@@ -30,11 +30,19 @@
             "from": "./src/pages"
           },
           {
+            "target": "./src/core",
+            "from": "./src/packages/shared"
+          },
+          {
+            "target": "./src/domain/components",
+            "from": "./src/pages"
+          },
+          {
             "target": "./src/domain/lib",
             "from": "./src/pages"
           },
           {
-            "target": "./src/domain/components",
+            "target": "./src/packages/shared",
             "from": "./src/pages"
           }
         ]
