@@ -5,18 +5,18 @@
   outline: none;
   border: none;
   text-decoration: none;
-  color: vars.$col-black;
 }
 
 body {
   font-family: vars.$font-text;
   font-size: vars.$fsize-16px;
   font-weight: vars.$fweight-regular;
+  background-color: vars.$col-body-bg;
 }
 
-// h3 {
-//   font-size: vars.$fsize-14px;
-// }
+h1 {
+  color: vars.$col-white;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react';
+import '@/styles/globals.scss';
 
 // import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'; => typeScript error with unable to find types for addon-viewport
 

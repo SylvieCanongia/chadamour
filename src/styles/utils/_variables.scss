@@ -2,8 +2,7 @@
 @use 'sass:math';
 
 // ====== FONT FAMILY ======
-$font-text: 'Montserrat', sans-serif;
-// $font-text: 'Roboto', sans-serif;
+$font-text: 'Quicksand', sans-serif;
 
 // ====== COLORS ======
 
@@ -11,6 +10,22 @@ $font-text: 'Montserrat', sans-serif;
 $col-secondary: hsl(310, 94%, 66%);
 $col-black: hsl(0deg, 0%, 0%);
 $col-white: hsl(0, 0%, 100%);
+
+$col-body-bg: hsl(308, 66%, 7%);
+
+// Card colors
+// $col-card-bg: hsl(30, 14%, 91%);
+$col-card-bg: hsla(0, 0%, 100%, 0.05);
+$col-card-bg: hsla(100, 100%, 100%, 0.9);
+$col-tag-blue: hsl(195, 86%, 64%);
+$col-tag-blue-text: hsl(0, 0%, 98%);
+$col-tag-blue-gradient: linear-gradient(
+  to bottom,
+  hsl(214, 84%, 56%),
+  hsl(195, 86%, 64%)
+);
+$col-card-time: hsl(0, 0%, 40%);
+
 // $col-body-bg: hsla(0, 0%, 100%, 1);
 // $col-card-bg: $col-white;
 // $col-cards-bg-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
@@ -39,8 +54,9 @@ $fsize-404-desktop: 18rem;
 $fweight-thin: 100;
 $fweight-light: 300;
 $fweight-regular: 400;
-$fweight-medium: 500;
+// $fweight-medium: 500;
 $fweight-bold: 700;
+$fweight-black: 900;
 
 // ====== SPACING ======
 

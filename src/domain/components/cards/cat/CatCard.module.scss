@@ -1,0 +1,150 @@
+@use './../../../../styles/utils/variables' as vars;
+
+.card__box {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.card__box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -5px;
+  inset: -2px;
+  background: #fff;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  border-radius: vars.$space-XS;
+  transition: 0.5s;
+}
+
+.card__box::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -6px;
+  inset: -2px;
+  background: #fff;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  border-radius: vars.$space-XS;
+  filter: blur(30px);
+}
+
+.card__box::before,
+.card__box::after {
+  background-image: linear-gradient(
+    315deg,
+    hsl(310deg 67% 46%) 0%,
+    hsl(310deg 67% 43%) 21%,
+    hsl(310deg 66% 41%) 30%,
+    hsl(310deg 66% 38%) 39%,
+    hsl(310deg 66% 35%) 46%,
+    hsl(310deg 66% 32%) 54%,
+    hsl(310deg 66% 30%) 61%,
+    hsl(310deg 66% 27%) 69%,
+    hsl(310deg 66% 25%) 79%,
+    hsl(310deg 66% 22%) 100%
+  );
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: vars.$col-card-bg;
+  backdrop-filter: blur(0px);
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.1);
+  border-radius: vars.$space-XS;
+  z-index: 1;
+  transform: 0.5s;
+  color: vars.$col-black;
+}
+
+// === Card header (image) ===
+
+.card__header {
+  position: relative;
+}
+
+.card__link {
+  position: absolute;
+  inset: 0;
+}
+
+.card__image {
+  object-fit: cover;
+  height: 350px;
+}
+
+// === CARD CONTENT ===
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+// === Card body ===
+
+.card__body {
+  padding: vars.$space-XS;
+  display: flex;
+  flex-direction: column;
+  gap: vars.$space-base;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: (vars.$space-XS * 0.2) (vars.$space-XS * 0.6);
+  border-radius: vars.$space-XS;
+  font-size: vars.$space-XS * 0.75;
+}
+
+.tag-blue {
+  background: vars.$col-tag-blue;
+  background: vars.$col-tag-blue-gradient;
+  color: vars.$col-tag-blue-text;
+}
+
+.card__body h2 {
+  font-size: vars.$fsize-24px;
+}
+
+// === Card user ===
+
+.card__user {
+  display: flex;
+  padding: vars.$space-XS;
+  padding-block-start: 0;
+  // keeps the header at the bottom
+  margin-block-start: auto;
+}
+
+.user {
+  display: flex;
+  gap: vars.$space-base;
+}
+
+.user__image {
+  border-radius: vars.$radius-cercle;
+  width: 35px;
+  height: 35px;
+}
+
+// Time
+.user__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user__info > small {
+  color: vars.$col-card-time;
+}

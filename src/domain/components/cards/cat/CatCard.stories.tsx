@@ -1,27 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import BaseTemplate, { IBaseTemplate } from './BaseTemplate';
-import { mockBaseTemplateProps } from './BaseTemplate.mock';
+import CatCard, { ICatCard } from './CatCard';
+import { mockCatCardProps } from './CatCard.mock';
 
-const meta: Meta<typeof BaseTemplate> = {
+const meta: Meta<typeof CatCard> = {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'templates/BaseTemplate',
-  component: BaseTemplate,
+  title: 'templates/CatCard',
+  component: CatCard,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof BaseTemplate>;
+type Story = StoryObj<typeof CatCard>;
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
  * See https://storybook.js.org/docs/react/api/csf
  * to learn how to use render functions.
  */
-export const Base: Story = {
+export const Card: Story = {
   args: {
-    ...mockBaseTemplateProps.base,
-  } as IBaseTemplate,
+    ...mockCatCardProps.base,
+  } as ICatCard,
 };
