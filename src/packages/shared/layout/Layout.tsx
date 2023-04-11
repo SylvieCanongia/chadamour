@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { Header, type HeaderProps } from '@chadamour/header';
 import styles from './Layout.module.scss';
-import logoImage from './logo-cat-3-250x49.png';
+import logoImage from './logo-cat-white-250x45.png';
 
 export interface ILayout {
   children?: React.ReactNode;
@@ -14,7 +14,7 @@ const headerProps: HeaderProps = {
     src: logoImage,
     alt: 'Logo de Chadamour',
     width: 250,
-    height: 49,
+    height: 45,
   },
   links: [
     {

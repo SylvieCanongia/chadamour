@@ -1,19 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { HeaderNavLink, NavLink } from '@/domain/components/HeaderNavLink';
+import { ImgProps } from '@/types/ImgProps';
 import styles from './Header.module.scss';
-
-export type ImageProps = {
-  src: StaticImageData;
-  alt: string;
-  width: number;
-  height: number;
-};
 
 // define our Header properties that will be passed into the component
 export type HeaderProps = {
-  logo: ImageProps;
+  logo: ImgProps;
   links: NavLink[];
 };
 
