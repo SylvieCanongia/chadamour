@@ -22,14 +22,14 @@ Un site pour les amoureux des chats :smile_cat: :kissing_cat: :heart_eyes:
 
 ## Environement de développement / Environment development
 
-- Verouillage des versions de Node (nvm) et du gestionnaire de paquet (npm)
+- Verrouillage des versions de Node sur le projet (`.nvmrc`) et du gestionnaire de paquet (`.npmrc`)
 - [Git](https://git-scm.com/doc)
 - Qualité avec [**ESLint**](https://eslint.org/)
 - Formattage avec [**Prettier**](https://prettier.io/) ([+ Extension VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode))
 - Git hooks avec [**Husky**](https://typicode.github.io/husky/#/) pour automatiser ESLint, Prettier et Build
 - Configuration des commit avec [**commitlint**](https://commitlint.js.org/#/) - [NPM package](https://www.npmjs.com/package/@commitlint/config-conventional)
 
-- Script de débogage avec [**cross-env**](<https://www.npmjs.com/package/cross-env>)
+- Script de débogage avec [**cross-env**](https://www.npmjs.com/package/cross-env)
 
 ```json
 // package.json
@@ -44,13 +44,13 @@ Un site pour les amoureux des chats :smile_cat: :kissing_cat: :heart_eyes:
 ```
 
 - Documentation avec [Storybook](https://storybook.js.org/).
-`pnpm storybook`
+  `pnpm storybook`
 
-  port local : http://localhost:6006/
+  port local : <http://localhost:6006/>
 
 ## Tests unitaires (et end-to-end)
 
-   A venir
+A venir
 
 ## Architecture des dossiers
 

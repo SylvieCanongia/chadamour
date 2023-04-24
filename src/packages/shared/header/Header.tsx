@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ logo, links }) => {
     <header className={styles.header}>
       <div className={styles.header__container}>
         <div className={styles.header__logo}>
-          <Link href="/">
+          <Link href="/" aria-label="Aller vers l\'accueil">
             <Image
               src={logo.src}
               alt={logo.alt}

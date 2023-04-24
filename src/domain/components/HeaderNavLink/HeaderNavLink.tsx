@@ -11,7 +11,7 @@ export const HeaderNavLink: React.FC<NavLink> = React.memo(
   ({ label, route }) => {
     return (
       <li className="headerNavLink">
-        <Link href={route}>{label}</Link>
+        <Link href={route} aria-label={`Aller vers`}>{label}</Link>
       </li>
     );
   }

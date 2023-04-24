@@ -28,7 +28,7 @@ const CatCard: React.FC<ICatCard> = ({
       <div className={styles.card__box}>
         <div className={styles.card}>
           <div className={styles.card__header}>
-            <Link href="/" className={styles.card__link}></Link>
+            <Link href="/" className={styles.card__link} aria-label="Afficher les détails sur ce chat"></Link>
             <Image
               src={cardImage.src}
               alt={cardImage.alt}
